@@ -1,0 +1,8 @@
+telebot
+timedelta
+pytz
+Flask
+aiogram
+pyTelegramBotAPI
+python-telegram-bot
+pymongo
