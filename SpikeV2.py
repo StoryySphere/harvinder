@@ -20,13 +20,13 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # Database Configuration
 MONGO_URI = 'mongodb+srv://harry:Sachdeva@cluster1.b02ct.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1'
 client = MongoClient(MONGO_URI)
-db = client['Testing']
+db = client['Venture']
 users_collection = db['shalu']
 settings_collection = db['settings']
 redeem_codes_collection = db['redeem_code-Harveyy']
 
 # Bot Configuration
-TELEGRAM_BOT_TOKEN = '7542906508:AAGY0M6HoSRqz-g1FStvxe5aLa7wTaIXkdw'
+TELEGRAM_BOT_TOKEN = '7794130580:AAFppGVaFjofH6aZRaSOoVnerEefoBTPuVk'
 ADMIN_USER_ID = 5134043595
 
 # Cooldown dictionary and user attack history
