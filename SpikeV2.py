@@ -26,7 +26,7 @@ settings_collection = db['settings']
 redeem_codes_collection = db['redeem_code-Harveyy']
 
 # Bot Configuration
-TELEGRAM_BOT_TOKEN = '7839440164:AAFRHrXfYX5ybFCEzncg9sOiIF7vSG5skKc'
+TELEGRAM_BOT_TOKEN = '7794130580:AAFppGVaFjofH6aZRaSOoVnerEefoBTPuVk'
 ADMIN_USER_ID = 5134043595
 
 # Cooldown dictionary and user attack history
