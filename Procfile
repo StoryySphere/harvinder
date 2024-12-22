@@ -1,1 +1,1 @@
-worker: SpikeV2.py
+worker: python SpikeV2.py
