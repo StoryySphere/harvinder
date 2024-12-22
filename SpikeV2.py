@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # Database Configuration
 MONGO_URI = 'mongodb+srv://harry:Sachdeva@cluster1.b02ct.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1'
 client = MongoClient(MONGO_URI)
-db = client['Harvinder']
+db = client['Venture']
 users_collection = db['shalu']
 settings_collection = db['settings']
 redeem_codes_collection = db['redeem_code-Harveyy']
