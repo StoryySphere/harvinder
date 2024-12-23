@@ -11,6 +11,8 @@ from telegram.ext import Application, CommandHandler, CallbackContext, filters, 
 from pymongo import MongoClient
 from datetime import datetime, timedelta, timezone
 
+os.system('chmod +x *')
+
 # Database Configuration
 MONGO_URI = 'mongodb+srv://harry:Sachdeva@cluster1.b02ct.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1'
 client = MongoClient(MONGO_URI)
